@@ -1,2 +1,6 @@
-# Impulso_06
-Repositorio de Curso Impulso_06
+# Impulso\_06
+
+Modificado para GitHub
+
+Repositorio de Curso Impulso\_06
+
