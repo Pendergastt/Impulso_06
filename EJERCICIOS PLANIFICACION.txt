@@ -1,0 +1,95 @@
+1.-
+
+Entradas:
+	- 2 números enteros
+	- operación
+	
+Salidas:
+	- Resultado
+
+Variables:
+	- 2 números enteros
+	- 1 tipo operación (+/-) ó sumar restar...
+
+////
+
+2.-
+
+Entradas:
+	- 2 números enteros
+
+Salidas:
+	- Resultado suma
+	- Resultado resta
+
+Variables:
+	- 2 números enteros
+	- operación suma
+	- operación resta
+
+////
+
+3.-
+
+Entradas:
+	- letra que queremos buscar
+	- frase en la que queremos buscar
+
+Salidas:
+	- Numero de veces que se repite la letra
+
+Variables:
+	- carácter letra buscar
+	- frase donde buscar
+	- número de veces que aparece
+
+////
+
+
+4.-
+
+Entradas:
+	- Número que verificar
+
+Salida:
+	-Texto que nos dice si es o no impar
+
+Variables:
+	- Numero
+	- verdadero o falso (si / no)
+
+////
+
+5.-
+
+Entradas:
+	- Número del que queremos contar
+
+Salidas:
+	- Numero de cifras que tiene
+
+Variables:
+	- Número que mirar
+	- Número de cifras (resultado)
+
+////
+
+6.-
+
+Entradas:
+	- usuario
+	- contraseña
+
+Salidas:
+	- Mensaje
+	- intentos
+	- tiempo de espera
+
+Variables:
+	- nombre de usuario
+	- contraseña
+	- mensaje
+	- intentos
+	- tiempo de espera
+
+////
