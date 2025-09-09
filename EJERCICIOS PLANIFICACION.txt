@@ -32,16 +32,16 @@ Variables:
 3.-
 
 Entradas:
-	- letra que queremos buscar
 	- frase en la que queremos buscar
 
 Salidas:
 	- Numero de veces que se repite la letra
 
 Variables:
-	- carácter letra buscar
-	- frase donde buscar
-	- número de veces que aparece
+	- frase (string)
+	- número de veces que aparece (no es una variable porque no hace falta guardarla)
+
+constante a (porque es la única letra que buscamos, por eso es constante)
 
 ////
 
