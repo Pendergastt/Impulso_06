@@ -78,18 +78,21 @@ Variables:
 
 Entradas:
 	- usuario
-	- contraseña
+	- password
 
 Salidas:
 	- Mensaje
 	- intentos
 	- tiempo de espera
+	- REALMENTE LO ÚNICO QUE HACE FALTA ES UN STRING QUE TE DIGA EL MENSAJE. intentos, tiempo... no son "salidas" como tal.
 
 Variables:
-	- nombre de usuario
-	- contraseña
-	- mensaje
-	- intentos
-	- tiempo de espera
+	- nombre de usuario (string)
+	- password (string)
+	- mensaje (string)
+	- intentos (int)
+	- tiempo de espera (int)
+	-- Contador de intentos (no el RNG que te dice el número que tienes, sino por el que vas) (int)
+	-- minuto en el que fallé (para, desde ese momento, saber cuando puede volver a intentarlo. con el tiempo global. (int)
 
 ////
