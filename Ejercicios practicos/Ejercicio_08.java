@@ -21,6 +21,8 @@ public class Ejercicio_08 {
         System.out.println("Introduce el número del mes");
         mesElegido=s.nextInt();
         
+        //Lo hacemos con un switch
+        
         switch(mesElegido){
             case 4,6,9,11 ->{
                 System.out.println("El mes elegido es "+meses[mesElegido-1]+" y tiene 30 días");
