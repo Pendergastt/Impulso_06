@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Imp_06 - Mañana
  */
-public class Ejercicio_1 {
+public class Ejercicio_01 {
 
     public static void main(String[] args) {
         Scanner s=new Scanner(System.in);

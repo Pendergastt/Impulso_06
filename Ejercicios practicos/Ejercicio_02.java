@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author Imp_06 - Mañana
  */
-public class Ejercicio_2 {
+public class Ejercicio_02 {
     public static void main(String[] args){
         Scanner s=new Scanner(System.in);
         
