@@ -11,24 +11,31 @@ import java.util.Scanner;
  * @author Imp_06 - Mañana
  */
 public class Ejercicio_02 {
-    public static void main(String[] args){
-        Scanner s=new Scanner(System.in);
-        
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
         String frase;
-        String letra;
-        int contador=0;
-        
+        char letra;
+        int contador = 0;
+        String indicadores="";
+
         System.out.println("Escribe una frase");
-        frase=s.nextLine();
+        frase = s.nextLine();
         System.out.println("Ahora dime una letra");
-        letra=s.nextLine();
-        
-        for(int i=0;i<frase.length()-1;i++){
-            if(frase.charAt(i)==letra.charAt(0)){
+        letra = s.next().charAt(0);
+
+        for (int i = 0; i < frase.length(); i++) {
+            if (frase.charAt(i) == letra) {
+                indicadores=indicadores+"^";
                 contador++;
+            }else{
+                indicadores=indicadores+" ";
             }
         }
         
         System.out.println(contador);
+                System.out.println(frase);
+                System.out.println(indicadores);
     }
 }
