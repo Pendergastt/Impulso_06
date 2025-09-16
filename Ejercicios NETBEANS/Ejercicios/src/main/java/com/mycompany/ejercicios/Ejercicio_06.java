@@ -39,7 +39,14 @@ public class Ejercicio_06 {
      
      for (int i=0;i<palabras.length;i++){
          System.out.println(palabras[i]);
-        }    
+        }
+     
+     //compareTo lo hace respecto al unicode. suma las letras y luego compara ese numero (o no)
+     String s1="da";
+     String s2="dc";
+     int comparado=s1.compareTo(s2);
+     System.out.println("comparado es "+comparado);
+     
     }
 }
 

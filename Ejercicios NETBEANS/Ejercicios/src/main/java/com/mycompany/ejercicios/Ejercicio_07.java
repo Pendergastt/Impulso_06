@@ -11,63 +11,96 @@ import java.util.Scanner;
  * @author Imp_06 - Mañana
  */
 public class Ejercicio_07 {
-    public static void main(String[] args){
-    
-        Scanner s= new Scanner(System.in);
+    // vamos a hacer un subprograma que haga comprobacion de mpositivo y lo devuelva
+    public static int pedirPositivo(String mensaje){
+        Scanner s = new Scanner(System.in);
+        int dato=0;
+        do {
+            System.out.println("Introduce "+mensaje);
+            dato = s.nextInt();
+            /*
+            if (mensaje.equals("la hora") && (dato>0 || dato <24)){
+            }
+            if (mensaje.equals("los minutos") && (dato>0 || dato <59)){
+            }
+            if (mensaje.equals("los segundos") && (dato>0 || dato <59)){
+            }
+            */
+        }while(correcto!=true);
+        return dato;
+    }
+
+    public static void main(String[] args) {
         
-        int hor;
-        int min;
-        int sec;
-              
+        int h= pedirPositivo("la hora");
+        int m= pedirPositivo("los minutos");
+        int s= pedirPositivo("los segundos");
+        
+        System.out.println("Son las "+h+":"+m+":"+s+" horas");
+        
+/*
+        Scanner s = new Scanner(System.in);
+
+        int hor=0;
+        int min=0;
+        int sec=0;
+
         System.out.println("Hola. Introduce una hora, unos minutos y unos segundos");
+
         
-        /*
-        System.out.println("Introduce un valor para la HORA");
         
-        hor=s.nextInt();
         
+        
+
         do{
-            System.out.println("No es una hora correcta. Pon otra hora");
+            System.out.println("Introduce un valor para la HORA");
+            
             hor= s.nextInt();
+            if(hor<0 || hor>24){
+                System.out.println("No es una hora correcta. Pon otra hora");
+            }
             
         }while(hor<0 || hor>24);
         
         
-        System.out.println("Ahora pon los minutos");
-        
-        min=s.nextInt();
-                
         do{
-            System.out.println("No es una hora correcta. Pon otros minutos");
+            System.out.println("Introduce un valor para los MINUTOS");
+            
             min= s.nextInt();
+            if(min<0 || min>59){
+                System.out.println("No son los minutos correctos. Pon otros minutos");
+            }
             
-        }while(min<0 || min>60);
-        
-        System.out.println("Ahora pon los minutos");
-        
-        sec=s.nextInt();
+        }while(min<0 || min>59);
         
         do{
-            System.out.println("No es una hora correcta. Pon otros segundos");
-            sec= s.nextInt();
+            System.out.println("Introduce un valor para los SEGUNDOS");
             
-        }while(sec<0 || sec>60);
-    */
+            min= s.nextInt();
+            if(sec<0 || sec>59){
+                System.out.println("No son los segundos correctos. Pon otros segundos");
+            }
+            
+        }while(min<0 || min>59);
+        
+        
+        
         System.out.println("Pon una hora");
-        hor=s.nextInt();
+        hor = s.nextInt();
         System.out.println("Pon unos minutos");
-        min=s.nextInt();
+        min = s.nextInt();
         System.out.println(min);
         System.out.println("Pon unos segundos");
-        sec=s.nextInt();
-        
-        if((hor<0 || hor>=24) || (min<0 || min >=60) || (sec<0 || sec>=60)){
+        sec = s.nextInt();
+
+        if ((hor < 0 || hor >= 23) || (min < 0 || min >= 59) || (sec < 0 || sec >= 59)) {
             System.out.println("Formato Incorrecto");
-        }else{System.out.println("Formato Correcto");
-        
+        } else {
+            System.out.println("Formato Correcto");
+
         }
-        
-        
-    
+
+*/
+
     }
 }
