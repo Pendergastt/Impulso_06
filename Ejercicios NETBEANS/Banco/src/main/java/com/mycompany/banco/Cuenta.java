@@ -14,6 +14,8 @@ public class Cuenta {
     private String titular;
     private double cantidad;
     
+    
+    
     //CONSTRUCTORES
     public Cuenta(String titular, int cantidad){
         this.titular=titular;
