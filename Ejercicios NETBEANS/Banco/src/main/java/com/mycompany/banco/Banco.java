@@ -53,7 +53,9 @@ public class Banco {
         nombre = s.nextLine();
         
         for (int i=0;i<cuentas.length;i++){
-            if (getitular)
+            if (cuentas[i].getTitular().equals(nombre)){
+                c=cuentas[i];
+            }
         }
           
 

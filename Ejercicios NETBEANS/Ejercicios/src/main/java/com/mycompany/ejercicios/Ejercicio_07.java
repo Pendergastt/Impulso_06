@@ -12,9 +12,11 @@ import java.util.Scanner;
  */
 public class Ejercicio_07 {
     // vamos a hacer un subprograma que haga comprobacion de mpositivo y lo devuelva
-    public static int pedirPositivo(String mensaje){
+    public static void pedirPositivo(String mensaje){
+/*
         Scanner s = new Scanner(System.in);
         int dato=0;
+
         do {
             System.out.println("Introduce "+mensaje);
             dato = s.nextInt();
@@ -25,9 +27,10 @@ public class Ejercicio_07 {
             }
             if (mensaje.equals("los segundos") && (dato>0 || dato <59)){
             }
-            */
+            
         }while(correcto!=true);
         return dato;
+
     }
 
     public static void main(String[] args) {
@@ -38,7 +41,7 @@ public class Ejercicio_07 {
         
         System.out.println("Son las "+h+":"+m+":"+s+" horas");
         
-/*
+
         Scanner s = new Scanner(System.in);
 
         int hor=0;
@@ -101,6 +104,7 @@ public class Ejercicio_07 {
         }
 
 */
+
 
     }
 }

@@ -11,56 +11,51 @@ import java.util.Scanner;
  * @author Imp_06 - Mañana
  */
 public class Ejercicio_08 {
-    public static void main(String[] args){
     
+    public static int pedirMes(){
         Scanner s=new Scanner(System.in);
         
         int mesElegido;
-        String[] meses= {"enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"};
-                
+        
+        do {
         System.out.println("Introduce el número del mes");
         mesElegido=s.nextInt();
+        if(mesElegido<1 || mesElegido>12){
+            System.out.println("Tienes que ser del 1 al 12");
+        }
+        }while (mesElegido<1 || mesElegido>12);
         
-        //Lo hacemos con un switch
+        return mesElegido-1;
+                
+    }
+    
+    public static void mostrarMes(int mes){
         
-        switch(mesElegido){
+        final String[] MESES= {"enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"};
+
+        switch(mes){
             case 4,6,9,11 ->{
-                System.out.println("El mes elegido es "+meses[mesElegido-1]+" y tiene 30 días");
+                System.out.println("El mes elegido es "+MESES[mes]+" y tiene 30 días");
                 break;
             }
             
             case 2 ->{
-                System.out.println("El mes elegido es "+meses[mesElegido-1]+" y tiene 28 días");
+                System.out.println("El mes elegido es "+MESES[mes]+" y tiene 28 días");
                 break;
             }
             
             default ->{
-                System.out.println("El mes elegido es "+meses[mesElegido-1]+" y tiene 31 días");
+                System.out.println("El mes elegido es "+MESES[mes]+" y tiene 31 días");
             }
         }
         
-        
-        
-        /*
-        if(mesElegido==2) {
-            System.out.println("El mes elegido es febrero y tiene 28 días");
-            
-        }
-        
-        if(mesElegido!=2){
-            for (int i=0;i<dias30.length-1;i++){
-                if(dias30[i].equals(meses[mesElegido-1])){
-                    System.out.println("El mes elegido es "+meses[mesElegido-1]+" y tiene 30 días");
-                    break;
-                }else{
-                    System.out.println("El mes elegido es "+meses[mesElegido-1]+" y tiene 31 días");
-                    break;
-                }
-                
-            }
-        }
-    */
-        
-        
+    }
+    
+       
+    public static void main(String[] args){
+    
+        int mesUsuario=pedirMes();
+        mostrarMes(mesUsuario);
+       
     }
 }
