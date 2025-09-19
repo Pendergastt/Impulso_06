@@ -41,29 +41,60 @@ public class Password {
     
     public char numero(){ //5 numeros
         int c;
-        c = (int)(Math.random()*48+(57-48));
+        c = (int)(Math.random()*10+48);
         return (char)c;
     }
     public char letraMay(){ //2 mayusculas
         int c;
-        c = (int)(Math.random()*65+(90-65));
+        c = (int)(Math.random()*25+65);
         return (char)c;
     }
     public char letraMin(){ //1 minuscula
         int c;
-        c = (int)(Math.random()*97+(122-97));
+        c = (int)(Math.random()*25+97);
         return (char)c;
     }
     
     public String generarPassword(int longitud){
     StringBuilder password=new StringBuilder(longitud);
+        int may=0;
+        int min=0;
+        int num=0;
+        boolean minimo=false;
+        
         for (int i=0;i<longitud;i++){
-            /*Que mire si hay lo necesario de cada una
-            si no, aleatorio de tal, pero si ya lo hay, que no sea del que ya está
-            */
+            char a = 0;               
+            if (may==2&&min==1&&num==5) minimo=true;            
+            do{
+            int c= (int)(Math.random()*3+1);
+            if (c==1&&may<2){
+                a=letraMay();
+                may++;}             
+            if(c==2&&min<1){
+                a=letraMin();
+                min++;}             
+            if(c==3&&num<5){
+                a=numero();
+                num++;
+            }
+            }while(a==0 && minimo==false);
+            if(minimo==true){
+            int c= (int)(Math.random()*3+1);
+            if (c==1)a=letraMay();
+                             
+            if(c==2)a=letraMin();
+                          
+            if(c==3)a=numero();                   
+            }
+            
+            password.append(a);
         }
-        return "";
+            
+            return password.toString();
     }
+    
+        
+    
     
     /*
     public String generarPassword(int longitud){
