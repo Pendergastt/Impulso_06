@@ -66,9 +66,9 @@ public class EjercicioPassword {
         }
         for (int i = 0; i < copia.length - 1; i++) {
         for (int j = 0; j < copia.length - 1 - i; j++) {
-            // Cambia el criterio según lo que quieras ordenar
+            
             if ((int)(copia[j].getPassword().charAt(0))>(int)((copia[j+1].getPassword().charAt(0)))) {
-                // Intercambio
+                
                 Password aux = copia[j];
                 copia[j] = copia[j + 1];
                 copia[j + 1] = aux;
