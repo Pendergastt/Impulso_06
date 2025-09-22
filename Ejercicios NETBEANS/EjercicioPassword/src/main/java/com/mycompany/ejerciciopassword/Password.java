@@ -30,6 +30,7 @@ public class Password {
         this.password=generarPassword(longitud);
     }
     
+        
     public Password(Password CPassword){
         this.password = CPassword.password;
         this.longitud = CPassword.longitud;
@@ -62,40 +63,51 @@ public class Password {
         int num=0;
         boolean minimo=false;
         
-        for (int i=0;i<longitud;i++){
-            char a = 0;               
-            if (may==2&&min==1&&num==5) minimo=true;            
-            do{
-            int c= (int)(Math.random()*3+1);
-            if (c==1&&may<2){
-                a=letraMay();
-                may++;}             
-            if(c==2&&min<1){
-                a=letraMin();
-                min++;}             
-            if(c==3&&num<5){
-                a=numero();
-                num++;
-            }
-            }while(a==0 && minimo==false);
-            if(minimo==true){
-            int c= (int)(Math.random()*3+1);
-            if (c==1)a=letraMay();
-                             
-            if(c==2)a=letraMin();
-                          
-            if(c==3)a=numero();                   
-            }
+        //INTRODUCIMOS UNA MONEDA
+              for (int i = 0; i < longitud; i++) {
+              char a = 0;
+                if (may == 2 && min == 1 && num == 5) {
+                    minimo = true;
+                }
+                do {
+                    int c = (int) (Math.random() * 3 + 1);
+                    if (c == 1 && may < 2) {
+                        a = letraMay();
+                        may++;
+                    }
+                    if (c == 2 && min < 1) {
+                        a = letraMin();
+                        min++;
+                    }
+                    if (c == 3 && num < 5) {
+                        a = numero();
+                        num++;
+                    }
+                } while (a == 0 && minimo == false);
+                if (minimo == true) {
+                    int c = (int) (Math.random() * 3 + 1);
+                    if (c == 1) {
+                        a = letraMay();
+                    }
+
+                    if (c == 2) {
+                        a = letraMin();
+                    }
+
+                    if (c == 3) {
+                        a = numero();
+                    }
+                }
+
+                password.append(a);
             
-            password.append(a);
         }
-            
             return password.toString();
+                    
+        
     }
     
-        
-    
-    
+
     /*
     public String generarPassword(int longitud){
         StringBuilder password=new StringBuilder(longitud);
@@ -111,7 +123,7 @@ public class Password {
     }
     */
     
-    public boolean esFuerte(String password){
+    public static boolean esFuerte(String password){
         boolean fuerte=false;
             int contMay=0;
             int contMin=0;

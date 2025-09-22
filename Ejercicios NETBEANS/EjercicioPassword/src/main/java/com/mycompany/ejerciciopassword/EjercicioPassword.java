@@ -15,6 +15,7 @@ public class EjercicioPassword {
     // static es que no necesita constructor
     private static Password[] lista;
     private static Password[] copia;
+    private static boolean[] confirmacionSeguros;
     
     public static void main(String[] args){
         
@@ -27,7 +28,8 @@ public class EjercicioPassword {
         System.out.println("El password 6 de la copiaes: "+copia[5].getPassword());
         mostrarCopia();
         
-       
+        confirmacionSeguros=arrayBooleans();
+
         
     }
     
@@ -54,6 +56,7 @@ public class EjercicioPassword {
         
         
         for (int i=0;i<lista.length;i++){
+            
             lista[i]=new Password(longitud);
             
             System.out.println("El password "+i+" es: "+lista[i].getPassword());
@@ -83,6 +86,18 @@ public class EjercicioPassword {
         }
     }
     
+    public static boolean[] arrayBooleans() {
+        confirmacionSeguros = new boolean[lista.length];
+        for (int i = 0; i < lista.length; i++) {
+            String pEvaluar = lista[i].getPassword();
+            if (Password.esFuerte(pEvaluar)) {
+                confirmacionSeguros[i] = true;
+            }
+            System.out.println(confirmacionSeguros[i]);
+        }
+        return confirmacionSeguros;
+    }
+
 }
 
 
