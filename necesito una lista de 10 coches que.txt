@@ -1,0 +1,21 @@
+necesito una lista de 10 coches que tenga las siguientes columnas
+
+id coche
+marca
+modelo
+matricula
+puertas
+precio
+
+
+INSERT INTO coches (id_coche, marca, modelo, matricula, puertas, precio_dia) VALUES
+(NULL, 'Toyota', 'Corolla', '2345KLM', 5, 45.00),
+(NULL, 'Ford', 'Focus', '9982BGT', 5, 42.00),
+(NULL, 'Volkswagen', 'Golf', '5630HZN', 5, 48.50),
+(NULL, 'SEAT', 'León', '1123DJF', 5, 46.00),
+(NULL, 'Renault', 'Clio', '7778PLK', 3, 38.00),
+(NULL, 'BMW', 'Serie 1', '8456XDS', 5, 65.00),
+(NULL, 'Peugeot', '308', '3201MRV', 5, 43.00),
+(NULL, 'Audi', 'A3', '5098CZT', 5, 68.50),
+(NULL, 'Hyundai', 'i30', '6782LDF', 5, 41.00),
+(NULL, 'Kia', 'Ceed', '4591TRM', 5, 40.00);

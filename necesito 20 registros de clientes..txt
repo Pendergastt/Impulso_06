@@ -1,0 +1,35 @@
+necesito 20 registros de clientes.
+Los clientes tendrán:
+- numero de cliente (formato xxxxxx)
+- nombre
+- apellidos
+- dni
+- teléfono
+- correo electrónico
+- antigüedad (fecha entre 2024 y la actual)
+
+Perfecto, aquí tienes 20 registros ficticios de clientes con los campos que especificaste. Todos los datos están generados de forma realista pero completamente inventados.
+
+
+INSERT INTO clientes (id, numero_cliente, nombre, apellidos, dni, telefono, correo_electronico, antiguedad) VALUES
+(NULL, 'Laura', 'Martínez Ruiz', '48930521D', '612345678', 'laura.mruiz@gmail.com', '2024-03-21'),
+(NULL, 'Javier', 'Gómez Pérez', '50419230X', '678901234', 'javier.gomezp@yahoo.es', '2024-06-15'),
+(NULL,  'Marta', 'Fernández Soto', '43218957Z', '699223344', 'marta.fso@hotmail.com', '2024-09-01'),
+(NULL,  'Daniel', 'López Cano', '47483920H', '611223344', 'dani.lopezc@gmail.com', '2025-01-13'),
+(NULL,  'Sonia', 'Delgado Torres', '50938472B', '679998877', 's.delgado@hotmail.com', '2024-12-05'),
+(NULL,  'Alejandro', 'Ruiz Muñoz', '47092847K', '644556677', 'aruiz.munoz@gmail.com', '2025-03-30'),
+(NULL,  'Carmen', 'Sánchez León', '48209374F', '633112233', 'carmen.sleon@yahoo.com', '2024-07-22'),
+(NULL,  'Pablo', 'Romero Gil', '46092837C', '622334455', 'pablo.romerog@hotmail.com', '2025-04-10'),
+(NULL,  'Lucía', 'Morales Díaz', '49821367M', '611009988', 'lucia.morales.dz@gmail.com', '2024-08-17'),
+(NULL,  'Sergio', 'Navarro Ríos', '45578921N', '677889900', 'sergio.navrios@gmail.com', '2025-09-10'),
+(NULL,  'Ana', 'Vargas Peña', '46910394Y', '699887766', 'ana.vargas.pn@hotmail.com', '2024-10-03'),
+(NULL,  'Rubén', 'Ortega Blanco', '49321740G', '655443322', 'rortega.blanco@gmail.com', '2024-11-25'),
+(NULL,  'Elena', 'Márquez Sáez', '48729384Q', '666121314', 'elena.marquez.s@hotmail.com', '2025-02-06'),
+(NULL,  'Marcos', 'Jiménez Navas', '47583920V', '688332211', 'marcos.jimnavas@gmail.com', '2025-05-18'),
+(NULL,  'Beatriz', 'Castro Mena', '49120384L', '600998877', 'b.castro.mena@yahoo.es', '2024-06-30'),
+(NULL,  'Víctor', 'Domínguez Rey', '48019273S', '610123456', 'victor.dominguezr@gmail.com', '2024-11-01'),
+(NULL,  'Patricia', 'Iglesias Barros', '46839402E', '633445566', 'patricia.ibarros@hotmail.com', '2025-06-05'),
+(NULL,  'Adrián', 'Molina Vera', '45283910T', '655667788', 'adrian.mvera@gmail.com', '2024-04-10'),
+(NULL,  'Nuria', 'Cabrera Pons', '48912308J', '699112233', 'nuria.cabrera.pons@gmail.com', '2025-08-12'),
+(NULL,  'Diego', 'Vidal Castro', '46103829W', '677554433', 'd.vidal.castro@yahoo.com', '2024-05-04');
+
