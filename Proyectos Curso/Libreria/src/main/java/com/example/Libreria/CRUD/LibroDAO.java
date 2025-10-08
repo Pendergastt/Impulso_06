@@ -47,6 +47,28 @@ public class LibroDAO {
         return listaLibros;
     }
 
+    public Libro mostrarLibro(int id) throws Exception {
+        String sql = "SELECT * FROM Libros WHERE id = ?";
+        Libro l = new Libro();
+        try (Connection conn = Conexion.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, id);
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+
+                l.setTitulo(rs.getString("titulo"));
+                l.setAutor(rs.getString("autor"));
+                l.setIsbn(rs.getString("isbn"));
+                l.setPaginas(rs.getInt("paginas"));
+                l.setPrecio(rs.getDouble("precio"));
+                System.out.println(l);
+            }
+
+        }
+        return l;
+
+    }
+
 
     // UPDATE
 

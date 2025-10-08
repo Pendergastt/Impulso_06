@@ -15,23 +15,29 @@ import java.util.Scanner;
 
 public class EndpointController {
 
-    LibroDAO dao= new LibroDAO();
+    LibroDAO dao = new LibroDAO();
 
     @GetMapping("/Listado")
     public String mostrarLibros() throws Exception {
         List<Libro> listaLibros = dao.verLibros();
-        String resultado="";
-        for(Libro l: listaLibros){
-            resultado+="\n "+l.toString();
+        String resultado = "";
+        for (Libro l : listaLibros) {
+            resultado += "\n " + l.toString();
         }
         return resultado;
 
     }
 
+    @GetMapping("/Libro")
+    public String mostrarUnLibro() throws Exception {
+        Libro resultado = dao.mostrarLibro(1);
+        return resultado.toString();
+    }
+
 
     @PostMapping("/agregar")
-    public String postEndpoint()throws Exception {
-        Libro nLibro= new Libro("Pruebalibro","autorlibro","isbn12",226,12.90);
+    public String postEndpoint() throws Exception {
+        Libro nLibro = new Libro("Pruebalibro", "autorlibro", "isbn12", 226, 12.90);
 
         dao.crearLibro(nLibro);
         return "Se ha insertado un libro";
@@ -39,8 +45,8 @@ public class EndpointController {
 
     @PatchMapping("/modificar")
     public String modificarLibro() throws Exception {
-        Libro mLibro= new Libro("modificado","autorMod","isbnMOD",12,1555);
-        dao.updateLibro(2,mLibro);
+        Libro mLibro = new Libro("modificado", "autorMod", "isbnMOD", 12, 1555);
+        dao.updateLibro(2, mLibro);
         return "Se ha modificado el libro";
     }
 
@@ -51,3 +57,5 @@ public class EndpointController {
     }
 
 }
+
+
