@@ -40,6 +40,48 @@ public class MedicoDAO {
         return null;
     }
 
+    public Medico buscarPorDni(String dni) throws Exception {
+        String sql = "SELECT * FROM medicos WHERE dni = ?";
+        try (Connection conn = Conexion.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, dni);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                Medico m = new Medico();
+                m.setId_medico(rs.getInt("id_medico"));
+                m.setNombre(rs.getString("nombre"));
+                m.setApellido1(rs.getString("apellido1"));
+                m.setApellido2(rs.getString("apellido2"));
+                m.setDni(rs.getString("dni"));
+                m.setTurno(rs.getString("turno"));
+                m.setEspecialidad(rs.getString("especialidad"));
+                return m;
+            }
+        }
+        return null;
+    }
+
+    public Medico buscarPorEspecialidad(String especialidad) throws Exception {
+        String sql = "SELECT * FROM medicos WHERE especialidad = ?";
+        try (Connection conn = Conexion.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, especialidad);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                Medico m = new Medico();
+                m.setId_medico(rs.getInt("id_medico"));
+                m.setNombre(rs.getString("nombre"));
+                m.setApellido1(rs.getString("apellido1"));
+                m.setApellido2(rs.getString("apellido2"));
+                m.setDni(rs.getString("dni"));
+                m.setTurno(rs.getString("turno"));
+                m.setEspecialidad(rs.getString("especialidad"));
+                return m;
+            }
+        }
+        return null;
+    }
+
     public List<Medico> listar() throws Exception {
         String sql = "SELECT * FROM medicos";
         List<Medico> lista = new ArrayList<>();
@@ -60,6 +102,8 @@ public class MedicoDAO {
         }
         return lista;
     }
+
+
 
     public void actualizar(Medico medico) throws Exception {
         String sql = "UPDATE medicos SET nombre = ?, apellido1 = ?, apellido2 = ?, dni = ?, turno = ?, especialidad = ? WHERE id_medico = ?";
@@ -91,6 +135,15 @@ public class MedicoDAO {
         try (Connection conn = Conexion.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setInt(1, id_medico);
+            stmt.executeUpdate();
+        }
+    }
+
+    public void borrarPorDni(String dni) throws Exception {
+        String sql = "DELETE FROM medicos WHERE dni = ?";
+        try (Connection conn = Conexion.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, dni);
             stmt.executeUpdate();
         }
     }
