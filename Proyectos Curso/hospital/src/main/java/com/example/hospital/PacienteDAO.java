@@ -197,7 +197,7 @@ public class PacienteDAO {
 
         //DELETE
         public static void eliminar(int id) throws Exception {
-            String sql = "DELETE FROM paciente WHERE id = ?";
+            String sql = "DELETE FROM paciente WHERE id_paciente = ?";
             try (Connection conn = Conexion.getConnection();
                  PreparedStatement stmt = conn.prepareStatement(sql)) {
                 stmt.setInt(1, id);
