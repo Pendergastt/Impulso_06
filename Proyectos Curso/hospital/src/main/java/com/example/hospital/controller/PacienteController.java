@@ -25,7 +25,7 @@ public class PacienteController {
 
     }
 
-    @PostMapping("/insertar")
+    @PostMapping("paciente/insertar")
     public Map<String, Object> registrarPaciente(@RequestBody Paciente paciente)
             throws Exception {
         PacienteDAO dao = new PacienteDAO();
@@ -46,18 +46,46 @@ public class PacienteController {
         return dao.cerarCita(cita);
 
     }
-
-}
-
-
-//HACER UN GET QUE MUESTRE TODOS LOS PACIENTES
-
-    //HACER UN POST PARA ANADIR UN PACIENTE
-
     //HACER UN PATCH PARA MODIFICAR DATOS DE PACIENTE
 
-    //HACER UN DELETE DE PACIENTE POR DNI
+    //@RestController
+    @PatchMapping("/{id}")
+    public static Paciente ActualizarPaciente(@PathVariable int id, @RequestBody Paciente PacienteDatos) throws Exception{
 
+
+        PacienteDAO.actualizar(id, PacienteDatos);
+        Paciente pacienteModificado = PacienteDAO.leer(id);
+
+
+        /*
+        Paciente paciente = PacienteDAO.leer(id);
+
+
+        if (PacienteDatos.getDni() != null) {
+            paciente.setDni(PacienteDatos.getDni());
+        }
+        if (PacienteDatos.getNombre() != null) {
+            paciente.setNombre(PacienteDatos.getNombre());
+        }
+        if (PacienteDatos.getApellidos() != null) {
+            paciente.setApellidos(PacienteDatos.getApellidos());
+        }
+        if (PacienteDatos.getfechaIngreso() != null) {
+            paciente.setfechaIngreso(PacienteDatos.getfechaIngreso());
+        }
+        */
+       return pacienteModificado;
+
+    }
+//HACER UN DELETE DE PACIENTE POR DNI
+
+    @DeleteMapping("/{id}")
+    public static void deletePaciente(@PathVariable int id) throws Exception{
+        PacienteDAO.eliminar(id);
+    }
+
+
+}
 
 
 

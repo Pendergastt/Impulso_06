@@ -13,6 +13,8 @@ public class PacienteDAO {
 
     // crear dao create, read update delete
 
+    // HOLA FARY! :)
+
     //CREATE
     public void crear(Paciente paciente) throws Exception {
         String sql = "INSERT INTO pacientes (dni, nombre, apellido1, fechaIngreso) VALUES (?, ?, ?, ?)";
@@ -94,8 +96,8 @@ public class PacienteDAO {
     }
 
     //READ
-    public Paciente leer(int id) throws Exception {
-        String sql = "SELECT * FROM pacientes WHERE id = ?";
+    public static Paciente leer(int id) throws Exception {
+        String sql = "SELECT * FROM pacientes WHERE id_paciente = ?";
         try (Connection conn = Conexion.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setInt(1, id);
@@ -179,21 +181,22 @@ public class PacienteDAO {
         return lista;
     }
         //UPDATE
-        public void actualizar(Paciente paciente) throws Exception {
-            String sql = "UPDATE pacientes SET dni = ?, nombre = ?, apellido1 = ?, fechaIngreso = ?, WHERE id = ?";
+        public static void actualizar(int id,Paciente p) throws Exception {
+            String sql = "UPDATE pacientes SET dni = ?, nombre = ?, apellido1 = ?, fechaIngreso = ?, WHERE id_paciente = ?";
+
             try (Connection conn = Conexion.getConnection();
                  PreparedStatement stmt = conn.prepareStatement(sql)) {
-                stmt.setString(1, paciente.getDni());
-                stmt.setString(2, paciente.getNombre());
-                stmt.setString(3, paciente.getApellidos());
-                stmt.setDate(4, paciente.getfechaIngreso());
-                stmt.setInt(5, paciente.getId());
+                stmt.setString(1, p.getDni());
+                stmt.setString(2, p.getNombre());
+                stmt.setString(3, p.getApellidos());
+                stmt.setDate(4, p.getfechaIngreso());
+                stmt.setInt(5, id);
                 stmt.executeUpdate();
             }
         }
 
         //DELETE
-        public void eliminar(int id) throws Exception {
+        public static void eliminar(int id) throws Exception {
             String sql = "DELETE FROM paciente WHERE id = ?";
             try (Connection conn = Conexion.getConnection();
                  PreparedStatement stmt = conn.prepareStatement(sql)) {
