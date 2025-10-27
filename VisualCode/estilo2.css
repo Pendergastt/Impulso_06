@@ -1,0 +1,53 @@
+h1, div#adicional a {
+    color:teal;
+}
+
+p strong,p.a,tfoot tr th,th[scope="row"] {
+    color:red;
+}
+
+span.destacado, td strong, th.especial[scope="row"]{
+    color:orange;
+}
+
+span.especial{
+    color:purple;
+}
+
+#subtitulo,p.em,caption{
+    color: blue;
+}
+
+.especial{
+    color:orange;
+}
+
+td {
+    color:green;
+}
+
+#adicional {
+    color:olive;
+}
+
+div#adicional span#especial{
+    color:fuchsia;
+}
+
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th{
+    border: 1px solid black;
+}
+
+td{
+    border: 1px solid black;
+}
+
+
+
+
+
+
