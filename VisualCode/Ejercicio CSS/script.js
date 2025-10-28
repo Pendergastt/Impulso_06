@@ -13,7 +13,16 @@ alert(enlaces[penultimo]);
 }
 
 function enlacesAPrueba(){
+
+    
     let enlaces = document.getElementsByTagName("a");
+    /*
+    let numEnlaces = enlaces.filter((a) => a.href=="http://prueba/");
+
+    console.log("enlaces con httpbla "+ numEnlaces)
+    */
+
+
     let n=0;
        
 
@@ -30,7 +39,8 @@ function enlacesAPrueba(){
 
 function numeroEnlacesTercerParrafo(){
 
-let nParrafos= document.getElementsByTagName("p");
+
+let nParrafos = document.getElementsByTagName("p");
 let ultimoParrafo = nParrafos[nParrafos.length-1];
 let numeroEnlaces = ultimoParrafo.getElementsByTagName("a").length;
 alert(`En el tercer párrafo hay ${numeroEnlaces} enlaces`);
