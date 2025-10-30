@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="script7.js"></script>
+</head>
+<body>
+
+ <div id="contenidos" style="width:150px; height:60px; border:thin solid silver">
+    Sección de contenidos...
+    </div>
+     <div id="contenidosegundo" style="width:150px; height:60px; border:thin solid silver"
+    onmouseover="document.getElementById('contenidos').style.borderColor='black';"
+    onmouseout="encima()">
+    Sección de contenidos...
+    </div>
+    <div id="cont3" style="width:150px; height:60px; border:thin solid silver; background-color: aqua;"
+    onmouseover="this.style.border='3px solid black';"
+    onmouseout ="this.style.borderColor='green'">
+    Sección de contenidos...
+    </div>
+    <p style="background-color: aquamarine;" onmouseover="this.style.border='3px solid black';this.style.background='green';"; onmouseleave="this.style.background='red';">
+hola que tal
+    </p>
+    
+</body>
+</html>
