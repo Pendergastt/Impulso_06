@@ -7,8 +7,7 @@ const insertarTexto = (etiqueta,texto)=>{
 
 const insertarImg = (url) => {
     let nElemento = document.createElement("img");
-    let nTexto = document.createTextNode(url);
-    nElemento.appendChild(nTexto);
+    nElemento.src()=(url);
     document.body.appendChild(nElemento);
 }
 
